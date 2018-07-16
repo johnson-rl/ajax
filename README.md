@@ -1,17 +1,6 @@
-<!--
-Creator: Cory Fauver
-Market: SF
--->
-
-![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
-
 # AJAX
 
 ### Why is this important?
-<!-- framing the "why" in big-picture/real world examples -->
-*This workshop is important because:*
-
-AJAX is a fast, user-friendly way to access data from external resources, when that data is available through a web API.
 
 In order to make complex web apps, we will probably want information from some of the amazing resources that provide rich, useful data. If you want to integrate maps, social media, live searched images, or any other user controlled data, you're going to want an API and AJAX to access it.
 
@@ -74,15 +63,7 @@ A **GUI** (graphical user interface) exists to make an application more convenie
 
 #### First Encounter with an API
 
-Follow along as I show you how I'd initially investigate the [Spotify API](https://developer.spotify.com/web-api/).
-
-1. Find documentation. 
-1. Check for any restrictions (authorization, API key, wait time for approval, etc.). 
-2. Pick an endpoint.
-3. Try to go to that endpoint and inspect some data.
-
-#### Breakout
-With a partner, spend 10 minutes on the following:
+Spend 10 minutes on the following:
   - Find an API on the internet, look at the documentation, and answer these questions:
     1. What format of data does this API return?
     1. How would you access the data that you're interested in? For example, for [Giphy](https://github.com/Giphy/GiphyAPI), the gif data that we're interested in is [located in the `data` array](https://github.com/Giphy/GiphyAPI#sample-response-search).
@@ -93,34 +74,6 @@ With a partner, spend 10 minutes on the following:
 ## AJAX
 
 __Asynchronous JavaScript And XML__ (AJAX) allows us to make requests to a server (ours or another application's) without refreshing the page.
-
-Let's break that down:
-
-__Asynchronous__ - not happening at the same time. Some of your code will be executed at a later time. Specifically, a callback will run when you get the results of your request - even if takes a while.  This waiting time won't hold up the performance of the rest of your page.
-
-__XML__ - a format for structuring data so that it can be sent and received across the web. XML has mostly been replaced by JSON, and AJAX can be used with either JSON or XML.
-
-You may also hear the term `XMLHttpRequest`. This is how vanilla JavaScript does AJAX. In fact, `window` object in the Browser has available to it another object, `XMLHttpRequest`. JavaScript's `XMLHttpRequest`s are notoriously annoying to create, so jQuery's shorthand (the `$.ajax()` function) is one of jQuery's most popular features.
-
-
-#### Why do we care?
-
-* In the past, requests had a "synchronous" workflow, where the user had to wait for the request to come back before anything else could happen on the page.  Synchronous requests also require the page to reload. 
-
-* AJAX lets us exchange data with the server behind the scenes. When a change is made on the client, we can use AJAX to send a request and notify the server of what just happened. This is an important way to maintain state between a client and a server that communicate in HTTP, an inherently stateless protocol.
-
-
-* **Limiting page reloads makes our web apps feel *faster* and mostly gives our users a *better experience*.** Imagine if you experienced a full page refresh every time you "liked" a post on Facebook....  The requests we've made so far have been synchronous. 
-
-
-![](http://www.cs.uky.edu/~paulp/CS316/CS316AJAX_html_m79697898.png)
-
-![](http://www.cs.uky.edu/~paulp/CS316/CS316AJAX_html_m2fd58f08.png)
-
-
-AJAX is the doorman! It knows what requests are out and what to do when they return. The code (hotel) can keep operating without waiting for a single request (guest) to complete.
-
-![](http://photos.mandarinoriental.com/is/image/MandarinOriental/dmo-people-london-doorman?$DMOBanner$&crop=355,272,2624,913&anchor=1667,728)
 
 #### How do we use AJAX?
 
@@ -353,11 +306,6 @@ For a solution, checkout the `solution` branch or find it [here on GitHub](https
 
 For a solution to the bonus checkout the `solution-more` branch or find it here on [GitHub](https://github.com/sf-wdi-34/giffaw/tree/solution-more).
 
-## Closing Thoughts
-- APIs open an entire world of more complex projects! All you need to access them is an understanding of HTTP.  Now, though, you can access them using AJAX for a smoother, faster user experience. 
-- The syntax of the `$.ajax()` function is complicated, but more practice will familiarize you with its uses and complexity. Check in on whether you can explain `method:`, `url:`, and `success:` without any outside resources.
-- Tomorrow we'll be working with the USGS earthquake API to display all of the most recent earthquakes using AJAX!
-- Later in the week, we'll be working with APIs that we can POST data to and update data in databases.
 
 ## Additional Resources
 - [jQuery's `$.ajax()` documentation](http://api.jquery.com/jquery.ajax/)
